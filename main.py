@@ -28,7 +28,7 @@ def find_mismatch(text):
 def main():
     while True:
         print("[!] \tUse an input to choose files or input - F or I ?")
-        text = input(">:: \t").upper()
+        text = input(">:: \t")
         if text == "F":
             try:
                 print("[!] \tEnter file name or file path. For example 'test/0'.")
