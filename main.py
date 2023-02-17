@@ -29,19 +29,16 @@ def main():
     print("[!] \tUse an input to choose files or input - F or I ?")
     text = input(">:: \t")
     if text == "F":
-        try:
-            print("[!] \tEnter file name or file path. For example 'test/0'.")
-            fileName = input(">:: \t")
-            with open(fileName, "r") as file:
-                sourceText = file.read().strip()
-        except:
-            print("[Err] \tFile not found.")
+        print("[!] \tEnter file name or file path. For example 'test/0'.")
+        fileName = input(">:: \t")
+        with open(fileName, "r") as file:
+            text = file.read().strip()
     elif text == "I":
         print("[!] \tEnter text below.")
-        sourceText = input(">:: \t").strip()
+        text = input(">:: \t").strip()
     else:
         print("[Err] \tWrong input.")
-    mismatch = find_mismatch(sourceText)
+    mismatch = find_mismatch(text)
     print(mismatch)
 
 
