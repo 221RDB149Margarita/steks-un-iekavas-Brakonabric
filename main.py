@@ -28,19 +28,16 @@ def find_mismatch(text):
 def main():
     print("[!] \tUse an input to choose files or input - F or I ?")
     text = input(">:: \t")
-    if text == "i":
+    if text == "f":
         print("[!] \tEnter file name or file path. For example 'test/0'.")
         fileName = input(">:: \t")
         with open(fileName, "r") as file:
             text = file.read().strip()
-    elif text == "f":
+    else:
         print("[!] \tEnter text below.")
         text = input(">:: \t").strip()
-    else:
-        print("[Err] \tWrong input.")
     mismatch = find_mismatch(text)
     print(mismatch)
-
-
+    
 if __name__ == "__main__":
     main()
