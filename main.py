@@ -26,24 +26,21 @@ def find_mismatch(text):
 
 
 def main():
-    while True:
-        print("[!] \tUse an input to choose files or input - F or I ?")
-        text = input(">:: \t")
-        if text == "F":
-            try:
-                print("[!] \tEnter file name or file path. For example 'test/0'.")
-                fileName = input(">:: \t")
-                with open(fileName, "r") as file:
-                    sourceText = file.read().strip()
-                break
-            except:
-                print("[Err] \tFile not found.")
-        elif text == "I":
-            print("[!] \tEnter text below.")
-            sourceText = input(">:: \t").strip()
-            break
-        else:
-            print("[Err] \tWrong input.")
+    print("[!] \tUse an input to choose files or input - F or I ?")
+    text = input(">:: \t")
+    if text == "F":
+        try:
+            print("[!] \tEnter file name or file path. For example 'test/0'.")
+            fileName = input(">:: \t")
+            with open(fileName, "r") as file:
+                sourceText = file.read().strip()
+        except:
+            print("[Err] \tFile not found.")
+    elif text == "I":
+        print("[!] \tEnter text below.")
+        sourceText = input(">:: \t").strip()
+    else:
+        print("[Err] \tWrong input.")
     mismatch = find_mismatch(sourceText)
     print(mismatch)
 
