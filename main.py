@@ -27,7 +27,6 @@ def find_mismatch(text):
 
 def main():
     while True:
-        print("----------------------------------------------------------")
         print("[!] \tUse an input to choose files or input - F or I ?")
         text = input(">:: \t").upper()
         if text == "F":
@@ -46,12 +45,7 @@ def main():
         else:
             print("[Err] \tWrong input.")
     mismatch = find_mismatch(sourceText)
-    print("----------------------------------------------------------")
-    if mismatch == "Success":
-        print("[Result] :: %s" % mismatch)
-    else:
-        print("[Result] :: Mismatch at char %d" % mismatch)
-    print("----------------------------------------------------------")
+    print(mismatch)
 
 
 if __name__ == "__main__":
