@@ -1,4 +1,5 @@
 # python3
+# Linass Jokšass 221RDB522
 
 from collections import namedtuple
 
